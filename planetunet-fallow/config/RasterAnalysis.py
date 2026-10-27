@@ -13,7 +13,7 @@ class Configuration:
         self.input_image_type = '.tif'
         self.input_image_pref = 'pred_L15'
         self.channel_prefixs = ['blue', 'green', 'red', 'infrared', 'ndvi','pred']
-        self.trained_model_path = './saved_models/UNet/trees_20210419-1602_AdaDelta_weightmap_tversky_012345_512.h5'
+        self.trained_model_path = './saved_models/UNet/fallow_20210419-1602_AdaDelta_weightmap_tversky_012345_512.h5'
 
         # Output related variables
         self.output_dir = self.input_image_dir

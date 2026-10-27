@@ -13,7 +13,7 @@ class Configuration:
         self.input_image_type = '.jp2'
         self.input_image_pref = 'split'
         self.channel_prefixs = ['blue', 'green', 'red', 'infrared', 'ndvi']
-        self.trained_model_path = './saved_models/UNet/trees_20211010-1531_AdaDelta_weightmap_tversky_01234_512.h5'
+        self.trained_model_path = './saved_models/UNet/crop_20211010-1531_AdaDelta_weightmap_tversky_01234_512.h5'
 
         # Output related variables
         self.output_dir = self.input_image_dir

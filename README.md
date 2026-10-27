@@ -56,11 +56,12 @@ The trained weights are too large for git (about 360 MB each), so they are attac
 
 | Model | File | MD5 |
 | --- | --- | --- |
-| Crop | `trees_20211010-1531_AdaDelta_weightmap_tversky_01234_512.h5` | `0864ebfc30e95c675b2529473d01e1e9` |
-| Fallow | `trees_20210419-1602_AdaDelta_weightmap_tversky_012345_512.h5` | `91aba01af725def5befffa4ea5d7d0b6` |
+| Crop | `crop_20211010-1531_AdaDelta_weightmap_tversky_01234_512.h5` | `0864ebfc30e95c675b2529473d01e1e9` |
+| Fallow | `fallow_20210419-1602_AdaDelta_weightmap_tversky_012345_512.h5` | `91aba01af725def5befffa4ea5d7d0b6` |
 
-Put each file in the matching `planetunet-<crop|fallow>/saved_models/UNet/` folder. The `trees_` prefix
-comes from the naming in the original tree-detection framework. The digits (`01234` / `012345`) are the input bands used.
+Put each file in the matching `planetunet-<crop|fallow>/saved_models/UNet/` folder. The filename gives the
+training timestamp, optimizer, loss, input bands (`01234` = blue, green, red, NIR, NDVI; `012345` adds the
+crop prediction) and patch size.
 
 ## Installation
 
@@ -71,6 +72,12 @@ jupyter lab
 ```
 
 The study used GDAL v3.1.2, rasterio v1.2, TensorFlow v2.5 and geopandas v0.9.
+
+### Hardware
+
+Training and prediction ran on a single NVIDIA GeForce RTX 3090 GPU with 24 GB of memory. The batch sizes in
+`config/UNetTraining.py` (8) and `config/RasterAnalysis.py` (200) are set for that card. Lower them for
+GPUs with less memory. The RTX 3090 needs CUDA 11, which TensorFlow 2.5 supports.
 
 ## Tree detection
 
