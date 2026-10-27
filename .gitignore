@@ -1,0 +1,14 @@
+# Jupyter / Python caches
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Trained models (>100 MB) are distributed as GitHub Release assets, see README
+*.h5
+
+# Tree-detection framework is already published, see README
+planetunet-tree/
+
+# Local data / outputs
+patches*/
+output_*/

@@ -1,0 +1,29 @@
+# Conda environment for the crop and fallow notebooks.
+# Versions follow those used in the study (GDAL 3.1, rasterio 1.2, TensorFlow 2.5, geopandas 0.9).
+name: planetunet
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - gdal=3.1
+  - rasterio=1.2
+  - geopandas=0.9
+  - fiona
+  - shapely
+  - pyproj
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - opencv
+  - imageio
+  - imgaug
+  - matplotlib
+  - pillow
+  - tqdm
+  - ipywidgets
+  - jupyterlab
+  - pip
+  - pip:
+      - tensorflow==2.5.*
