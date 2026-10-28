@@ -24,6 +24,7 @@ The resulting maps are available on Zenodo:
 ```
 planetunet-crop/      U-Net for cropped fields (input: blue, green, red, NIR, NDVI)
 planetunet-fallow/    U-Net for fallowed fields (input: blue, green, red, NIR, NDVI + crop prediction)
+sahel_analysis/       Data, source data and statistical analysis for Figures 2 and 3
 environment.yml       Conda environment
 ```
 
@@ -48,6 +49,12 @@ Both model folders have the same layout:
 
 The paths in `config/*.py` and in some notebook cells point to the original data storage. Edit them
 to match your environment before running.
+
+## Analysis for Figures 2 and 3
+
+[`sahel_analysis/`](sahel_analysis) holds the 1 km grid-cell table, the source data for Figs. 2 and 3, and
+`analysis_fig3.py`, which reproduces the statistics behind Fig. 3 and the archetype shares in Fig. 2c.
+See [`sahel_analysis/README.md`](sahel_analysis/README.md).
 
 ## Trained models
 
